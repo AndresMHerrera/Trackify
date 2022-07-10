@@ -1,3 +1,4 @@
+import { ProjectsPageComponent } from './../modules/projects/pages/projects-page/projects-page.component';
 import { EventsPageComponent } from './../modules/summary/pages/events-page/events-page.component';
 import { DashboardPageComponent } from './../modules/summary/pages/dashboard-page/dashboard-page.component';
 import { LayoutComponent } from './../modules/core/components/layout/layout.component';
@@ -34,6 +35,15 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardPageComponent
+      },
+      {
+        path: 'projects',
+        children: [
+          {
+            path: '',
+            component: ProjectsPageComponent
+          }
+        ]
       }
     ]
   },

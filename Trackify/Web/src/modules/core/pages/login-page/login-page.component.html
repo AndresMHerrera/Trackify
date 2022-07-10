@@ -1,3 +1,33 @@
-<p>login-page works!</p>
-<button (click)="onLogin()"> login </button>
-<button (click)="onSignup()"> signup </button>
+<!-- <p>login-page works!</p> -->
+<!-- <button (click)="onLogin()"> login </button> -->
+<!-- <button (click)="onSignup()"> signup </button> -->
+
+
+<div class="container">
+  <div class="form-container">
+
+      <h4  class="title"> Task Tracker </h4>
+      <form (ngSubmit)="onLogin()">
+          <mat-form-field>
+              <mat-label> username </mat-label>
+              <input type="text" matInput>
+          </mat-form-field>
+
+          <mat-form-field>
+              <mat-label> password </mat-label>
+              <input type="password" matInput>
+          </mat-form-field>
+
+          <div class="missing-creadentials-container">
+              <a (click)="onSignup()"> Forgot Password? </a>
+          </div>
+
+          <br>
+
+          <div class="button-container">
+              <button mat-raised-button color="accent" type="submit"> log in </button>
+          </div>
+      </form>
+  </div>
+</div>
+

@@ -1,0 +1,4 @@
+<ul>
+  <!-- <li *ngFor="let link of links" [routerLink]="link.link"> {{ link.name }} </li> -->
+  <li *ngFor="let link of links" (click)="onNavigate(link)"> {{ link.name }} </li>
+</ul>
