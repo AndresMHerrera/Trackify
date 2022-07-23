@@ -19,4 +19,8 @@ export class LayoutComponent implements OnInit {
     this.router.navigate(['auth/dashboard']);
   }
 
+  onLogout(): void {
+    this.router.navigate(['']);
+  }
+
 }
