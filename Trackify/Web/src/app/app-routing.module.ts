@@ -1,3 +1,4 @@
+import { ProjectDetailsPageComponent } from './../modules/projects/pages/project-details-page/project-details-page.component';
 import { ProjectsPageComponent } from './../modules/projects/pages/projects-page/projects-page.component';
 import { EventsPageComponent } from './../modules/summary/pages/events-page/events-page.component';
 import { DashboardPageComponent } from './../modules/summary/pages/dashboard-page/dashboard-page.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
           {
             path: '',
             component: ProjectsPageComponent
+          },
+          {
+            path: ':id',
+            component: ProjectDetailsPageComponent
           }
         ]
       }

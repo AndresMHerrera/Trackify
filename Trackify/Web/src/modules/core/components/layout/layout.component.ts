@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,9 +10,13 @@ export class LayoutComponent implements OnInit {
 
   showFiller: boolean = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onGoHome(): void {
+    this.router.navigate(['auth/dashboard']);
   }
 
 }

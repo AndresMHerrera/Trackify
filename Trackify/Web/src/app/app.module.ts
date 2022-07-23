@@ -1,3 +1,4 @@
+import { ProjectsModule } from './../modules/projects/projects.module';
 import { SummaryModule } from './../modules/summary/summary.module';
 import { CoreModule } from './../modules/core/core.module';
 import { NgModule } from '@angular/core';
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     CoreModule,
     SummaryModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
