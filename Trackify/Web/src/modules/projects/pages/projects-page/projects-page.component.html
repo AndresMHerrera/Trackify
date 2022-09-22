@@ -1,5 +1,28 @@
-<p>projects-page works!</p>
+<h2> My Projects </h2>
 
-<ul>
-  <li *ngFor="let item of projects" (click)="onViewDetails(item)"> {{ item.name }} </li>
-</ul>
+<table mat-table [dataSource]="data" class="mat-elevation-z8 demo-table">
+  <!-- Project Name -->
+  <ng-container matColumnDef="projectName">
+    <th mat-header-cell *matHeaderCellDef> Project Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element">
+      <button (click)="onViewDetails(element)" mat-icon-button color="primary" title="View Project Details">
+        <mat-icon> visibility </mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

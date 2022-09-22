@@ -12,6 +12,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 /*
 *  A core module is a NgModule that instantiates the app and loads core functions that will be used globally across the application.
 *  Thus any singleton service should be implemented in a core module. A header, footer, or navigation bar are examples of this type of module.
@@ -36,7 +38,8 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule
   ]
 })
 export class CoreModule { }

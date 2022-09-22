@@ -1,7 +1,7 @@
+import { ProjectsService } from './../../services/projects.service';
+import { ProjectModel } from './../../models/project.model';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-
-export type Project = { id: number, name: string }
 
 @Component({
   selector: 'app-projects-page',
@@ -10,16 +10,22 @@ export type Project = { id: number, name: string }
 })
 export class ProjectsPageComponent implements OnInit {
 
-  projects: Project[] = [];
+  data: ProjectModel[] = [];
 
-  constructor(private router: Router) { }
+  displayedColumns: string[] = ['projectName', 'description', 'actions'];
+
+  constructor(private router: Router, private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
-    this.projects.push({ id: 0, name: 'Trackify' });
-    this.projects.push({ id: 1, name: 'Shopify' });
+    this.projectsService.getUserProjects().subscribe(
+      (data) => {
+        this.data = data;
+        console.log(this.data);
+      }
+    );
   }
 
-  onViewDetails(project: Project): void {
+  onViewDetails(project: ProjectModel): void {
     this.router.navigate(['auth/projects', project.id]);
   }
 

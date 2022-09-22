@@ -1,1 +1,36 @@
-<p>project-details-page works!</p>
+<ng-container *ngIf="(project$ | async) as project">
+  <h2> {{ project.name }} </h2>
+
+  <!-- <mat-card class="example-card">
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-content>
+      <p>This card indeterminates progress bar.</p>
+      <p> hello </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card> -->
+
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-title> {{ project.name }} </mat-card-title>
+        <mat-card-subtitle> Details </mat-card-subtitle>
+        <mat-card-content>
+          <p> {{ project.description }} </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list>
+
+</ng-container>
