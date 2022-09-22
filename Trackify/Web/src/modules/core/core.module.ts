@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { HeaderComponent } from './components/header/header.component';
 
 /*
 *  A core module is a NgModule that instantiates the app and loads core functions that will be used globally across the application.
@@ -26,7 +27,8 @@ import {MatMenuModule} from '@angular/material/menu';
     LoginPageComponent,
     SignupPageComponent,
     LayoutComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

@@ -15,12 +15,4 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onGoHome(): void {
-    this.router.navigate(['auth/dashboard']);
-  }
-
-  onLogout(): void {
-    this.router.navigate(['']);
-  }
-
 }
