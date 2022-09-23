@@ -1,0 +1,21 @@
+<mat-drawer-container class="drawer">
+  <mat-drawer #drawer mode="side" opened="true">
+    <app-navigation-bar></app-navigation-bar>
+    <button class="drawer__button" (click)="drawer.toggle()" mat-flat-button color="primary"> Close </button>
+  </mat-drawer>
+  <mat-drawer-content class="drawer__content">
+    <div class="content">
+      <div class="content__toolbar">
+        <button mat-icon-button (click)="drawer.toggle()" color="primary"
+          aria-label="Example icon button with a home icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="content__outlet">
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
