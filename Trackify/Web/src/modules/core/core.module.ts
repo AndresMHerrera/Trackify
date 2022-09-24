@@ -1,3 +1,4 @@
+// import { SharedModule } from './../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -43,7 +44,8 @@ import { DrawerComponent } from './components/drawer/drawer.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatMenuModule
+    MatMenuModule,
+    // SharedModule
   ]
 })
 export class CoreModule { }

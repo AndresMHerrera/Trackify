@@ -1,3 +1,4 @@
+import { SharedModule } from './../modules/shared/shared.module';
 import { ProjectsModule } from './../modules/projects/projects.module';
 import { SummaryModule } from './../modules/summary/summary.module';
 import { CoreModule } from './../modules/core/core.module';
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CoreModule,
     SummaryModule,
     BrowserAnimationsModule,
-    ProjectsModule
+    ProjectsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

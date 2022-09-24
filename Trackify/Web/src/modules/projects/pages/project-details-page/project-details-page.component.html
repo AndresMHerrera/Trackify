@@ -1,55 +1,140 @@
-<p>
-  test testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
-  test testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest  test testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
-
-</p>
-<!-- <ng-container *ngIf="(project$ | async) as project">
-
-  <mat-grid-list cols="2" rowHeight="2:1" gutterSize="5">
-
-    <mat-grid-tile>
-
-      <mat-card class="example-card">
-        <mat-card-title> {{ project.name }} </mat-card-title>
-        <mat-card-subtitle> Details </mat-card-subtitle>
-        <mat-card-content>
-          <p> {{ project.description }} </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card class="example-card">
-
-        <mat-card-title> Team Members </mat-card-title>
-        <mat-card-subtitle> Details </mat-card-subtitle>
-        <mat-card-content>
+<ng-container *ngIf="(project$ | async) as project">
+  <div class="grid">
+    <div class="grid__section">
+      <trackify-card>
+        <ng-container title> Project Details </ng-container>
+        <ng-container actions>
+          <button mat-icon-button>
+            <mat-icon>read_more</mat-icon>
+          </button>
+        </ng-container>
+        <ng-container body>
+          <label> Project Name </label>
+          <p name="name"> {{ project.name }} </p>
+          <label> Project Description </label>
+          <p name=""> {{ project.description }} </p>
+        </ng-container>
+      </trackify-card>
+    </div>
+    <div class="grid__section">
+      <trackify-card>
+        <ng-container title> Deadlines </ng-container>
+        <ng-container actions>
+          <button mat-icon-button>
+            <mat-icon>read_more</mat-icon>
+          </button>
+        </ng-container>
+        <ng-container body>
           <table>
             <tr>
-              <th> Name </th>
+              <th> Description </th>
+              <th> Date </th>
+              <th> Status </th>
+            </tr>
+            <tr>
+              <td> V2 of App </td>
+              <td> 11/23/2022 </td>
+              <td> In Progress </td>
+            </tr>
+            <tr>
+              <td> User Requested Features </td>
+              <td> 03/22/2022 </td>
+              <td> Cancelled </td>
+            </tr>
+            <tr>
+              <td> V1 of App </td>
+              <td> 10/12/2021 </td>
+              <td> Complete </td>
+            </tr>
+          </table>
+        </ng-container>
+      </trackify-card>
+    </div>
+    <div class="grid__section">
+      <trackify-card>
+        <ng-container title> Team Members </ng-container>
+        <ng-container actions>
+          <button mat-icon-button>
+            <mat-icon>read_more</mat-icon>
+          </button>
+        </ng-container>
+        <ng-container body>
+          <table>
+            <tr>
+              <th> Username </th>
               <th> Email </th>
               <th> Role </th>
             </tr>
             <tr>
-              <td> Andres </td>
-              <td> andres@email.com </td>
+              <td>Alfreds Futterkiste</td>
+              <td> email@gmail.com </td>
               <td> Admin </td>
             </tr>
+            <tr>
+              <td> Peter Parker </td>
+              <td> email@gmail.com </td>
+              <td> Developer </td>
+            </tr>
+            <tr>
+              <td> Bruce Banner </td>
+              <td> email@gmail.com </td>
+              <td> Developer </td>
+            </tr>
           </table>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-  </mat-grid-list>
-
-</ng-container> -->
+        </ng-container>
+      </trackify-card>
+    </div>
+    <div class="grid__section">
+      <trackify-card>
+        <ng-container title> Tasks </ng-container>
+        <ng-container actions>
+          <button mat-icon-button>
+            <mat-icon> read_more </mat-icon>
+          </button>
+        </ng-container>
+        <ng-container body>
+          <div style="display: flex; flex-flow: row nowrap; justify-content: space-between;">
+            <div>
+              <label> Pending Tasks </label>
+              <p name="name"> 47 </p>
+            </div>
+            <div>
+              <label> Tasks </label>
+              <p name="name"> 30 </p>
+            </div>
+            <div>
+              <label> Bugs </label>
+              <p name="name"> 17 </p>
+            </div>
+            <div>
+              <label> Backlog </label>
+              <p name="name"> 7 </p>
+            </div>
+          </div>
+        </ng-container>
+      </trackify-card>
+    </div>
+    <div class="grid__section">
+      <trackify-card>
+        <ng-container title> Sprints </ng-container>
+        <ng-container actions>
+          <button mat-icon-button>
+            <mat-icon> read_more </mat-icon>
+          </button>
+        </ng-container>
+        <ng-container body>
+          <div style="display: flex; flex-flow: row nowrap; justify-content: space-around;">
+            <div>
+              <label> Completed </label>
+              <p name="name"> 11 </p>
+            </div>
+            <div>
+              <label> Current Sprint </label>
+              <p name="name"> Nov. 10 - Nov. 20 </p>
+            </div>
+          </div>
+        </ng-container>
+      </trackify-card>
+    </div>
+  </div>
+</ng-container>

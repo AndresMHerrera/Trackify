@@ -1,0 +1,11 @@
+<div class="card">
+  <mat-toolbar color="accent">
+    <span> <ng-content select="[title]"></ng-content> </span>
+    <span class="example-spacer"></span>
+    <ng-content select="[actions]"></ng-content>
+  </mat-toolbar>
+
+  <div class="card__body">
+    <ng-content select="[body]"></ng-content>
+  </div>
+</div>
