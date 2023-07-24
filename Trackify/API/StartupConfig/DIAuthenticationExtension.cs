@@ -32,7 +32,7 @@ public static class DIAuthenticationExtension
                     ValidAudience = builder.Configuration.GetValue<string>("Authentication:Audience"),
                     IssuerSigningKey = new SymmetricSecurityKey(
                         Encoding.ASCII.GetBytes(
-                        builder.Configuration.GetValue<string>("Authentication.SecretKey")))
+                        builder.Configuration.GetValue<string>("Authentication:SecretKey")))
                 };
             }
         );
